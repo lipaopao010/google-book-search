@@ -25,7 +25,9 @@ app.get("*", (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://localhost:27017/googlebooks', 
+  process.env.MONGODB_URI ||
+  "mongodb://user1:password1@ds159998.mlab.com:59998/heroku_9rdj68zw",
+ 
     {useNewUrlParser: true},
 
     function(error){
@@ -33,6 +35,7 @@ mongoose.connect(
       app.listen(PORT, () => {
         console.log(`🌎 ==> API server now on port ${PORT}!`);
       });
-    })
+    }
+    )
 
 
