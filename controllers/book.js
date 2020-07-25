@@ -16,6 +16,7 @@ exports.add = async function add(req,res){
 
 exports.delete = async function deleteBook(req,res){
     const { _id } = req.params;
+    console.log(_id);
     await Book.deleteOne({ _id });
-    res.json({ id });
+    res.json({ _id });
 }

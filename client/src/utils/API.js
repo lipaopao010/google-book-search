@@ -21,6 +21,7 @@ export default {
     },
 
     async deleteBook(id){
+        console.log(id);
         const response = await fetch(`/api/books/${id}`,
         {
             method:'DELETE',

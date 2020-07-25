@@ -3,6 +3,7 @@ import { Row , Col , ListGroup , Button, Image } from 'react-bootstrap';
 
 
 export default function BookListItem({ 
+    _id,
     title, 
     link, 
     authors, 
@@ -22,7 +23,7 @@ export default function BookListItem({
                 { onSave && <Button onClick ={() => {
                     onSave({title,authors,description,image,link});
                     }}>Save</Button>}
-                { onDelete && <Button onClick ={onDelete} variant = "danger">Delete</Button>}
+                { onDelete && <Button onClick ={()=>{onDelete(_id)}} variant = "danger">Delete</Button>}
                 </Col>
             </Row>
         

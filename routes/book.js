@@ -14,6 +14,6 @@ router.post("/", book.add);
 
 //delete api/book/id
 
-router.delete("/:id",book.delete);
+router.delete("/:_id",book.delete);
 
 module.exports = router;
