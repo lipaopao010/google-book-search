@@ -26,9 +26,10 @@ app.get("*", (req, res) => {
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://user1:password1@ds159998.mlab.com:59998/heroku_9rdj68zw",
+  "mongodb://localhost:27017/googlebooks",
  
     {useNewUrlParser: true},
+
 
     function(error){
       if (error) throw error;
